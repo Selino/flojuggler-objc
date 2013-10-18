@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Flos" representedClassName="Flos" syncable="YES">
+        <attribute name="cycle" optional="YES" attributeType="Integer 16" defaultValueString="30" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="7" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="NAME" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" defaultDateTimeInterval="378734400" defaultValueString="2013-01-01" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Flos" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
 </model>

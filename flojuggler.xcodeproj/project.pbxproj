@@ -22,6 +22,9 @@
 		7629AA391811AE1A00F84AB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA1D1811AE1A00F84AB7 /* CoreData.framework */; };
 		7629AA411811AE1A00F84AB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA3F1811AE1A00F84AB7 /* InfoPlist.strings */; };
 		7629AA431811AE1A00F84AB7 /* flojugglerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA421811AE1A00F84AB7 /* flojugglerTests.m */; };
+		7629AA4E1811AF7E00F84AB7 /* Flos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA4D1811AF7E00F84AB7 /* Flos.m */; };
+		7629AA501811AFC000F84AB7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */; };
+		7629AA531811B10600F84AB7 /* FlosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA521811B10600F84AB7 /* FlosTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		7629AA3E1811AE1A00F84AB7 /* flojugglerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "flojugglerTests-Info.plist"; sourceTree = "<group>"; };
 		7629AA401811AE1A00F84AB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7629AA421811AE1A00F84AB7 /* flojugglerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flojugglerTests.m; sourceTree = "<group>"; };
+		7629AA4C1811AF7E00F84AB7 /* Flos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flos.h; sourceTree = "<group>"; };
+		7629AA4D1811AF7E00F84AB7 /* Flos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flos.m; sourceTree = "<group>"; };
+		7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7629AA511811B10600F84AB7 /* FlosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlosTableViewController.h; sourceTree = "<group>"; };
+		7629AA521811B10600F84AB7 /* FlosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +127,12 @@
 				7629AA291811AE1A00F84AB7 /* AppDelegate.m */,
 				7629AA2E1811AE1A00F84AB7 /* Images.xcassets */,
 				7629AA2B1811AE1A00F84AB7 /* flojuggler.xcdatamodeld */,
+				7629AA4C1811AF7E00F84AB7 /* Flos.h */,
+				7629AA4D1811AF7E00F84AB7 /* Flos.m */,
 				7629AA201811AE1A00F84AB7 /* Supporting Files */,
+				7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */,
+				7629AA511811B10600F84AB7 /* FlosTableViewController.h */,
+				7629AA521811B10600F84AB7 /* FlosTableViewController.m */,
 			);
 			path = flojuggler;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7629AA501811AFC000F84AB7 /* MainStoryboard.storyboard in Resources */,
 				7629AA241811AE1A00F84AB7 /* InfoPlist.strings in Resources */,
 				7629AA2F1811AE1A00F84AB7 /* Images.xcassets in Resources */,
 			);
@@ -248,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7629AA531811B10600F84AB7 /* FlosTableViewController.m in Sources */,
 				7629AA2A1811AE1A00F84AB7 /* AppDelegate.m in Sources */,
+				7629AA4E1811AF7E00F84AB7 /* Flos.m in Sources */,
 				7629AA261811AE1A00F84AB7 /* main.m in Sources */,
 				7629AA2D1811AE1A00F84AB7 /* flojuggler.xcdatamodeld in Sources */,
 			);
