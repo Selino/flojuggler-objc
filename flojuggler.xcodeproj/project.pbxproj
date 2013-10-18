@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7629AA181811AE1A00F84AB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA171811AE1A00F84AB7 /* Foundation.framework */; };
+		7629AA1A1811AE1A00F84AB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA191811AE1A00F84AB7 /* CoreGraphics.framework */; };
+		7629AA1C1811AE1A00F84AB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA1B1811AE1A00F84AB7 /* UIKit.framework */; };
+		7629AA1E1811AE1A00F84AB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA1D1811AE1A00F84AB7 /* CoreData.framework */; };
+		7629AA241811AE1A00F84AB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA221811AE1A00F84AB7 /* InfoPlist.strings */; };
+		7629AA261811AE1A00F84AB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA251811AE1A00F84AB7 /* main.m */; };
+		7629AA2A1811AE1A00F84AB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA291811AE1A00F84AB7 /* AppDelegate.m */; };
+		7629AA2D1811AE1A00F84AB7 /* flojuggler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA2B1811AE1A00F84AB7 /* flojuggler.xcdatamodeld */; };
+		7629AA2F1811AE1A00F84AB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA2E1811AE1A00F84AB7 /* Images.xcassets */; };
+		7629AA361811AE1A00F84AB7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA351811AE1A00F84AB7 /* XCTest.framework */; };
+		7629AA371811AE1A00F84AB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA171811AE1A00F84AB7 /* Foundation.framework */; };
+		7629AA381811AE1A00F84AB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA1B1811AE1A00F84AB7 /* UIKit.framework */; };
+		7629AA391811AE1A00F84AB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7629AA1D1811AE1A00F84AB7 /* CoreData.framework */; };
+		7629AA411811AE1A00F84AB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA3F1811AE1A00F84AB7 /* InfoPlist.strings */; };
+		7629AA431811AE1A00F84AB7 /* flojugglerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA421811AE1A00F84AB7 /* flojugglerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7629AA3A1811AE1A00F84AB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7629AA0C1811AE1A00F84AB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7629AA131811AE1A00F84AB7;
+			remoteInfo = flojuggler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7629AA141811AE1A00F84AB7 /* flojuggler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flojuggler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7629AA171811AE1A00F84AB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7629AA191811AE1A00F84AB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7629AA1B1811AE1A00F84AB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7629AA1D1811AE1A00F84AB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7629AA211811AE1A00F84AB7 /* flojuggler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "flojuggler-Info.plist"; sourceTree = "<group>"; };
+		7629AA231811AE1A00F84AB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7629AA251811AE1A00F84AB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7629AA271811AE1A00F84AB7 /* flojuggler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flojuggler-Prefix.pch"; sourceTree = "<group>"; };
+		7629AA281811AE1A00F84AB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7629AA291811AE1A00F84AB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7629AA2C1811AE1A00F84AB7 /* flojuggler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flojuggler.xcdatamodel; sourceTree = "<group>"; };
+		7629AA2E1811AE1A00F84AB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7629AA341811AE1A00F84AB7 /* flojugglerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flojugglerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7629AA351811AE1A00F84AB7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7629AA3E1811AE1A00F84AB7 /* flojugglerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "flojugglerTests-Info.plist"; sourceTree = "<group>"; };
+		7629AA401811AE1A00F84AB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7629AA421811AE1A00F84AB7 /* flojugglerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flojugglerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7629AA111811AE1A00F84AB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA1A1811AE1A00F84AB7 /* CoreGraphics.framework in Frameworks */,
+				7629AA1E1811AE1A00F84AB7 /* CoreData.framework in Frameworks */,
+				7629AA1C1811AE1A00F84AB7 /* UIKit.framework in Frameworks */,
+				7629AA181811AE1A00F84AB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7629AA311811AE1A00F84AB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA361811AE1A00F84AB7 /* XCTest.framework in Frameworks */,
+				7629AA391811AE1A00F84AB7 /* CoreData.framework in Frameworks */,
+				7629AA381811AE1A00F84AB7 /* UIKit.framework in Frameworks */,
+				7629AA371811AE1A00F84AB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7629AA0B1811AE1A00F84AB7 = {
+			isa = PBXGroup;
+			children = (
+				7629AA1F1811AE1A00F84AB7 /* flojuggler */,
+				7629AA3C1811AE1A00F84AB7 /* flojugglerTests */,
+				7629AA161811AE1A00F84AB7 /* Frameworks */,
+				7629AA151811AE1A00F84AB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7629AA151811AE1A00F84AB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA141811AE1A00F84AB7 /* flojuggler.app */,
+				7629AA341811AE1A00F84AB7 /* flojugglerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7629AA161811AE1A00F84AB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA171811AE1A00F84AB7 /* Foundation.framework */,
+				7629AA191811AE1A00F84AB7 /* CoreGraphics.framework */,
+				7629AA1B1811AE1A00F84AB7 /* UIKit.framework */,
+				7629AA1D1811AE1A00F84AB7 /* CoreData.framework */,
+				7629AA351811AE1A00F84AB7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7629AA1F1811AE1A00F84AB7 /* flojuggler */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA281811AE1A00F84AB7 /* AppDelegate.h */,
+				7629AA291811AE1A00F84AB7 /* AppDelegate.m */,
+				7629AA2E1811AE1A00F84AB7 /* Images.xcassets */,
+				7629AA2B1811AE1A00F84AB7 /* flojuggler.xcdatamodeld */,
+				7629AA201811AE1A00F84AB7 /* Supporting Files */,
+			);
+			path = flojuggler;
+			sourceTree = "<group>";
+		};
+		7629AA201811AE1A00F84AB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA211811AE1A00F84AB7 /* flojuggler-Info.plist */,
+				7629AA221811AE1A00F84AB7 /* InfoPlist.strings */,
+				7629AA251811AE1A00F84AB7 /* main.m */,
+				7629AA271811AE1A00F84AB7 /* flojuggler-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7629AA3C1811AE1A00F84AB7 /* flojugglerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA421811AE1A00F84AB7 /* flojugglerTests.m */,
+				7629AA3D1811AE1A00F84AB7 /* Supporting Files */,
+			);
+			path = flojugglerTests;
+			sourceTree = "<group>";
+		};
+		7629AA3D1811AE1A00F84AB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7629AA3E1811AE1A00F84AB7 /* flojugglerTests-Info.plist */,
+				7629AA3F1811AE1A00F84AB7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7629AA131811AE1A00F84AB7 /* flojuggler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7629AA461811AE1A00F84AB7 /* Build configuration list for PBXNativeTarget "flojuggler" */;
+			buildPhases = (
+				7629AA101811AE1A00F84AB7 /* Sources */,
+				7629AA111811AE1A00F84AB7 /* Frameworks */,
+				7629AA121811AE1A00F84AB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = flojuggler;
+			productName = flojuggler;
+			productReference = 7629AA141811AE1A00F84AB7 /* flojuggler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7629AA331811AE1A00F84AB7 /* flojugglerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7629AA491811AE1A00F84AB7 /* Build configuration list for PBXNativeTarget "flojugglerTests" */;
+			buildPhases = (
+				7629AA301811AE1A00F84AB7 /* Sources */,
+				7629AA311811AE1A00F84AB7 /* Frameworks */,
+				7629AA321811AE1A00F84AB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7629AA3B1811AE1A00F84AB7 /* PBXTargetDependency */,
+			);
+			name = flojugglerTests;
+			productName = flojugglerTests;
+			productReference = 7629AA341811AE1A00F84AB7 /* flojugglerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7629AA0C1811AE1A00F84AB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Selino Valdes";
+				TargetAttributes = {
+					7629AA331811AE1A00F84AB7 = {
+						TestTargetID = 7629AA131811AE1A00F84AB7;
+					};
+				};
+			};
+			buildConfigurationList = 7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "flojuggler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7629AA0B1811AE1A00F84AB7;
+			productRefGroup = 7629AA151811AE1A00F84AB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7629AA131811AE1A00F84AB7 /* flojuggler */,
+				7629AA331811AE1A00F84AB7 /* flojugglerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7629AA121811AE1A00F84AB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA241811AE1A00F84AB7 /* InfoPlist.strings in Resources */,
+				7629AA2F1811AE1A00F84AB7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7629AA321811AE1A00F84AB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA411811AE1A00F84AB7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7629AA101811AE1A00F84AB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA2A1811AE1A00F84AB7 /* AppDelegate.m in Sources */,
+				7629AA261811AE1A00F84AB7 /* main.m in Sources */,
+				7629AA2D1811AE1A00F84AB7 /* flojuggler.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7629AA301811AE1A00F84AB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7629AA431811AE1A00F84AB7 /* flojugglerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7629AA3B1811AE1A00F84AB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7629AA131811AE1A00F84AB7 /* flojuggler */;
+			targetProxy = 7629AA3A1811AE1A00F84AB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7629AA221811AE1A00F84AB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7629AA231811AE1A00F84AB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7629AA3F1811AE1A00F84AB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7629AA401811AE1A00F84AB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7629AA441811AE1A00F84AB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7629AA451811AE1A00F84AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7629AA471811AE1A00F84AB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				INFOPLIST_FILE = "flojuggler/flojuggler-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7629AA481811AE1A00F84AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				INFOPLIST_FILE = "flojuggler/flojuggler-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7629AA4A1811AE1A00F84AB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/flojuggler.app/flojuggler";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "flojugglerTests/flojugglerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7629AA4B1811AE1A00F84AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/flojuggler.app/flojuggler";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				INFOPLIST_FILE = "flojugglerTests/flojugglerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "flojuggler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7629AA441811AE1A00F84AB7 /* Debug */,
+				7629AA451811AE1A00F84AB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7629AA461811AE1A00F84AB7 /* Build configuration list for PBXNativeTarget "flojuggler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7629AA471811AE1A00F84AB7 /* Debug */,
+				7629AA481811AE1A00F84AB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7629AA491811AE1A00F84AB7 /* Build configuration list for PBXNativeTarget "flojugglerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7629AA4A1811AE1A00F84AB7 /* Debug */,
+				7629AA4B1811AE1A00F84AB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7629AA2B1811AE1A00F84AB7 /* flojuggler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7629AA2C1811AE1A00F84AB7 /* flojuggler.xcdatamodel */,
+			);
+			currentVersion = 7629AA2C1811AE1A00F84AB7 /* flojuggler.xcdatamodel */;
+			path = flojuggler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7629AA0C1811AE1A00F84AB7 /* Project object */;
+}
