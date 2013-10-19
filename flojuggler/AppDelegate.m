@@ -16,6 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //grab hold of the table view so we can pass it refrences to the managed object context
+    
+    UINavigationController *nav = (UINavigationController *)self.window.rootViewController; //grab the nav controller
+    
+    FlosTableViewController *fvtc = (FlosTableViewController *) [[nav viewControllers]objectAtIndex:0]; // gran the table view out of the nav
+    
+    fvtc.managedObjectContext = self.managedObjectContext; //set the managed context of the table view to this app delegate's context
+    
     return YES;
 }
 

@@ -7,12 +7,15 @@
 //
 
 #import "FlosTableViewController.h"
+#import "Flos.h"
 
 @interface FlosTableViewController ()
 
 @end
 
 @implementation FlosTableViewController
+
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +35,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    // make the fetch
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error] ) {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +55,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [[self.fetchedResultsController sections]count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    
+    id <NSFetchedResultsSectionInfo> secInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [secInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,8 +73,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+
+    Flos *flo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = flo.name;
     return cell;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[[self.fetchedResultsController sections]objectAtIndex:section]name];
 }
 
 /*
@@ -104,6 +121,34 @@
     return YES;
 }
 */
+
+#pragma mark -
+#pragma mark fetched Results Contoller section
+-(NSFetchedResultsController *) fetchedResultsController {
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    // if no fetch exists (nil) then we need to make one
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Flos"
+                                              inManagedObjectContext:self.managedObjectContext];
+                                   [fetchRequest setEntity:entity];
+                                   
+                                   NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"
+                                                                                                  ascending:YES];
+                                   NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+                                   [fetchRequest setSortDescriptors:sortDescriptors];
+                                   
+                                   _fetchedResultsController = [[NSFetchedResultsController alloc]
+                                                initWithFetchRequest:fetchRequest
+                                                managedObjectContext:self.managedObjectContext
+                                                  sectionNameKeyPath:nil
+                                                           cacheName:nil];
+                                   
+                                   return _fetchedResultsController;
+                                   
+                                   }
 
 /*
 #pragma mark - Navigation
