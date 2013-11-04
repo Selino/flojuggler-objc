@@ -17,6 +17,7 @@
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -25,6 +26,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -132,7 +134,7 @@
     // if no fetch exists (nil) then we need to make one
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Flos"
-                                              inManagedObjectContext:self.managedObjectContext];
+                                              inManagedObjectContext:[self managedObjectContext]];
                                    [fetchRequest setEntity:entity];
                                    
                                    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"
@@ -142,7 +144,7 @@
                                    
                                    _fetchedResultsController = [[NSFetchedResultsController alloc]
                                                 initWithFetchRequest:fetchRequest
-                                                managedObjectContext:self.managedObjectContext
+                                                managedObjectContext:[self managedObjectContext]
                                                   sectionNameKeyPath:nil
                                                            cacheName:nil];
                                    

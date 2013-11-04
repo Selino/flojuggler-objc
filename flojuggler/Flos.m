@@ -11,9 +11,18 @@
 
 @implementation Flos
 
-@dynamic name;
-@dynamic length;
-@dynamic cycle;
-@dynamic startDate;
+@synthesize name,length,cycle,startDate;
+
+//@dynamic name;
+//@dynamic length;
+//@dynamic cycle;
+//@dynamic startDate;
+
+-(int)selinoMethod:(int)number {
+    
+    number = number + 10;
+    NSLog(@"Here is my %i",number);
+    return number;
+}
 
 @end

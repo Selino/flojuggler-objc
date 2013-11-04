@@ -25,6 +25,8 @@
 		7629AA4E1811AF7E00F84AB7 /* Flos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA4D1811AF7E00F84AB7 /* Flos.m */; };
 		7629AA501811AFC000F84AB7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */; };
 		7629AA531811B10600F84AB7 /* FlosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA521811B10600F84AB7 /* FlosTableViewController.m */; };
+		767DCF6F1819F6C500517509 /* FlosTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 767DCF6E1819F6C500517509 /* FlosTest.m */; };
+		76F2B3AE1828354100B6B66A /* AddFloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F2B3AD1828354100B6B66A /* AddFloViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7629AA511811B10600F84AB7 /* FlosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlosTableViewController.h; sourceTree = "<group>"; };
 		7629AA521811B10600F84AB7 /* FlosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTableViewController.m; sourceTree = "<group>"; };
+		767DCF6E1819F6C500517509 /* FlosTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTest.m; sourceTree = "<group>"; };
+		76F2B3AC1828354100B6B66A /* AddFloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFloViewController.h; sourceTree = "<group>"; };
+		76F2B3AD1828354100B6B66A /* AddFloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFloViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,8 @@
 		7629AA0B1811AE1A00F84AB7 = {
 			isa = PBXGroup;
 			children = (
+				76F2B3AC1828354100B6B66A /* AddFloViewController.h */,
+				76F2B3AD1828354100B6B66A /* AddFloViewController.m */,
 				7629AA1F1811AE1A00F84AB7 /* flojuggler */,
 				7629AA3C1811AE1A00F84AB7 /* flojugglerTests */,
 				7629AA161811AE1A00F84AB7 /* Frameworks */,
@@ -151,6 +158,7 @@
 		7629AA3C1811AE1A00F84AB7 /* flojugglerTests */ = {
 			isa = PBXGroup;
 			children = (
+				767DCF6E1819F6C500517509 /* FlosTest.m */,
 				7629AA421811AE1A00F84AB7 /* flojugglerTests.m */,
 				7629AA3D1811AE1A00F84AB7 /* Supporting Files */,
 			);
@@ -264,6 +272,7 @@
 			files = (
 				7629AA531811B10600F84AB7 /* FlosTableViewController.m in Sources */,
 				7629AA2A1811AE1A00F84AB7 /* AppDelegate.m in Sources */,
+				76F2B3AE1828354100B6B66A /* AddFloViewController.m in Sources */,
 				7629AA4E1811AF7E00F84AB7 /* Flos.m in Sources */,
 				7629AA261811AE1A00F84AB7 /* main.m in Sources */,
 				7629AA2D1811AE1A00F84AB7 /* flojuggler.xcdatamodeld in Sources */,
@@ -275,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7629AA431811AE1A00F84AB7 /* flojugglerTests.m in Sources */,
+				767DCF6F1819F6C500517509 /* FlosTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +397,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "flojuggler/flojuggler-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -400,6 +411,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "flojuggler/flojuggler-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "flojuggler/flojuggler-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -467,6 +479,7 @@
 				7629AA481811AE1A00F84AB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7629AA491811AE1A00F84AB7 /* Build configuration list for PBXNativeTarget "flojugglerTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +488,7 @@
 				7629AA4B1811AE1A00F84AB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
