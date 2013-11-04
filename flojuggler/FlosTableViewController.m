@@ -17,6 +17,33 @@
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
+-(void)addFloViewControllerDidCancel:(Flos *)floToDelete {
+    
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:floToDelete];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addFloViewControllerDidSave {
+    NSError *error = nil;
+    NSManagedObjectContext *context = self.managedObjectContext;
+    if (![context save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"addFloSegue"]) {
+        AddFloViewController *afvc = (AddFloViewController *) [segue destinationViewController];
+        afvc.delegate = self;
+        
+        Flos *newFlo = (Flos *) [NSEntityDescription insertNewObjectForEntityForName:@"Flos" inManagedObjectContext:[self managedObjectContext]];
+        
+        afvc.currentFlo = newFlo;
+    }
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

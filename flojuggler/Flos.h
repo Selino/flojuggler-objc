@@ -17,6 +17,4 @@
 @property (nonatomic, retain) NSNumber * cycle;
 @property (nonatomic, retain) NSDate * startDate;
 
--(int)selinoMethod:(int)number;
-
 @end

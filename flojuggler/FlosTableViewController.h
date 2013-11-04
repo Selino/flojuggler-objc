@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddFloViewController.h"
 
-@interface FlosTableViewController : UITableViewController
+@interface FlosTableViewController : UITableViewController <AddFloViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext; //reference to managedobject so we can save, load, etc.
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

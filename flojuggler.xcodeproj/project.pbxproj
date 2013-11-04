@@ -64,8 +64,8 @@
 		7629AA511811B10600F84AB7 /* FlosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlosTableViewController.h; sourceTree = "<group>"; };
 		7629AA521811B10600F84AB7 /* FlosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTableViewController.m; sourceTree = "<group>"; };
 		767DCF6E1819F6C500517509 /* FlosTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTest.m; sourceTree = "<group>"; };
-		76F2B3AC1828354100B6B66A /* AddFloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFloViewController.h; sourceTree = "<group>"; };
-		76F2B3AD1828354100B6B66A /* AddFloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFloViewController.m; sourceTree = "<group>"; };
+		76F2B3AC1828354100B6B66A /* AddFloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFloViewController.h; path = ../AddFloViewController.h; sourceTree = "<group>"; };
+		76F2B3AD1828354100B6B66A /* AddFloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFloViewController.m; path = ../AddFloViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,6 @@
 		7629AA0B1811AE1A00F84AB7 = {
 			isa = PBXGroup;
 			children = (
-				76F2B3AC1828354100B6B66A /* AddFloViewController.h */,
-				76F2B3AD1828354100B6B66A /* AddFloViewController.m */,
 				7629AA1F1811AE1A00F84AB7 /* flojuggler */,
 				7629AA3C1811AE1A00F84AB7 /* flojugglerTests */,
 				7629AA161811AE1A00F84AB7 /* Frameworks */,
@@ -130,6 +128,8 @@
 		7629AA1F1811AE1A00F84AB7 /* flojuggler */ = {
 			isa = PBXGroup;
 			children = (
+				76F2B3AC1828354100B6B66A /* AddFloViewController.h */,
+				76F2B3AD1828354100B6B66A /* AddFloViewController.m */,
 				7629AA281811AE1A00F84AB7 /* AppDelegate.h */,
 				7629AA291811AE1A00F84AB7 /* AppDelegate.m */,
 				7629AA2E1811AE1A00F84AB7 /* Images.xcassets */,
