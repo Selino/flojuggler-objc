@@ -46,12 +46,11 @@
 
 - (IBAction)cancelFlo:(id)sender {
     // dismiss and remove the object
-    NSLog(@"testing rocks");
     [self.delegate addFloViewControllerDidCancel:[self currentFlo]];
 }
 
 - (IBAction)saveFlo:(id)sender {
-    // dismiss and save the context
+    // dismiss the view and save the context
     [self.currentFlo setName:_nameField.text];
     
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
