@@ -7,6 +7,7 @@
 //
 
 #import "DisplayEditViewController.h"
+#import "AppDelegate.h"
 
 @interface DisplayEditViewController ()
 
@@ -43,4 +44,48 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startEditing:(id)sender {
+    _nameField.enabled = YES;
+    _cycleField.enabled = YES;
+    _lengthField.enabled = YES;
+    _startDateField.enabled = YES;
+    
+    _nameField.borderStyle = UITextBorderStyleRoundedRect;
+    _cycleField.borderStyle = UITextBorderStyleRoundedRect;
+    _lengthField.borderStyle = UITextBorderStyleRoundedRect;
+    _startDateField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    _editButton.hidden = YES;
+    _doneButton.hidden = NO;
+}
+- (IBAction)doneEditing:(id)sender {
+    _nameField.enabled = NO;
+    _cycleField.enabled = NO;
+    _lengthField.enabled = NO;
+    _startDateField.enabled = NO;
+    
+    _nameField.borderStyle = UITextBorderStyleNone;
+    _cycleField.borderStyle = UITextBorderStyleNone;
+    _lengthField.borderStyle = UITextBorderStyleNone;
+    _startDateField.borderStyle = UITextBorderStyleNone;
+    
+    _editButton.hidden = NO;
+    _doneButton.hidden = YES;
+    
+    _currentFlo.name = _nameField.text;
+    
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    _currentFlo.cycle = [f numberFromString: _cycleField.text];
+    _currentFlo.length = [f numberFromString: _lengthField.text];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    _currentFlo.startDate = [df dateFromString:_startDateField.text];
+    
+    AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    [myApp saveContext];
+    
+}
 @end

@@ -17,4 +17,10 @@
 
 @property (nonatomic, strong) Flos *currentFlo;
 
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
+- (IBAction)doneEditing:(id)sender;
+- (IBAction)startEditing:(id)sender;
+
 @end
