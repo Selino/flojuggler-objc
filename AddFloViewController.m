@@ -31,6 +31,7 @@
     
     _nameField.text = [self.currentFlo name];
     _cycleField.text = [[self.currentFlo cycle] stringValue];
+    _lengthField.text = [[self.currentFlo length] stringValue];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
@@ -52,13 +53,16 @@
 - (IBAction)saveFlo:(id)sender {
     // dismiss and save the context
     [self.currentFlo setName:_nameField.text];
-    //[self.currentFlo setCycle:_cycleField.text];
     
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber * myNumber = [f numberFromString:_cycleField.text];
+    NSNumber * myCycle = [f numberFromString:_cycleField.text];
+    [self.currentFlo setCycle: myCycle];
     
-    [self.currentFlo setCycle: myNumber];
+    NSNumberFormatter * l = [[NSNumberFormatter alloc] init];
+    [l setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber * myLength = [l numberFromString:_lengthField.text];
+    [self.currentFlo setLength: myLength];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];

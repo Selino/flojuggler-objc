@@ -8,6 +8,7 @@
 
 #import "FlosTableViewController.h"
 #import "Flos.h"
+#import "DisplayEditViewController.h"
 
 @interface FlosTableViewController ()
 
@@ -42,6 +43,13 @@
         Flos *newFlo = (Flos *) [NSEntityDescription insertNewObjectForEntityForName:@"Flos" inManagedObjectContext:[self managedObjectContext]];
         
         afvc.currentFlo = newFlo;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        DisplayEditViewController *dvc = (DisplayEditViewController *) [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Flos *selectedFlo = (Flos *) [self.fetchedResultsController objectAtIndexPath:indexPath];
+        dvc.currentFlo = selectedFlo;
     }
 }
 
@@ -121,19 +129,21 @@
 }
 */
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        NSManagedObjectContext *context = [self managedObjectContext];
+        Flos *floToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [context deleteObject:floToDelete];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Error! %@",error);
+        }
+    }
+    
 }
-*/
 
 /*
 // Override to support rearranging the table view.
@@ -174,10 +184,59 @@
                                                 managedObjectContext:[self managedObjectContext]
                                                   sectionNameKeyPath:nil
                                                            cacheName:nil];
+    
+    _fetchedResultsController.delegate = self;
                                    
                                    return _fetchedResultsController;
                                    
                                    }
+
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate: {
+            Flos *changedFlo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.textLabel.text = changedFlo.name;
+        }
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+    
+}
+// sections edit method not being used
+//-(void) controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+//    switch (type) {
+//        case NSFetchedResultsChangeInsert:
+//            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//        case NSFetchedResultsChangeDelete:
+//            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+//            break;
+//    }
+//}
 
 /*
 #pragma mark - Navigation
