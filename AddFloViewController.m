@@ -33,9 +33,12 @@
     _cycleField.text = [[self.currentFlo cycle] stringValue];
     _lengthField.text = [[self.currentFlo length] stringValue];
     
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    _startDateField.text =[dateFormat stringFromDate:[self.currentFlo startDate]];
+//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+//    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+//    _startDateField.text =[dateFormat stringFromDate:[self.currentFlo startDate]];
+    
+    //NSDate *dateSelected = [_startDatePicker date];
+    _startDatePicker.date = [self.currentFlo startDate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,9 +66,9 @@
     NSNumber * myLength = [l numberFromString:_lengthField.text];
     [self.currentFlo setLength: myLength];
     
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    [self.currentFlo setStartDate:[dateFormat dateFromString:_startDateField.text]];
+//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+//    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    [self.currentFlo setStartDate:[_startDatePicker date]];
     
     [self.delegate addFloViewControllerDidSave];
 }
