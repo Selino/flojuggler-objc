@@ -9,10 +9,6 @@
 #import "AddFloViewController.h"
 #import "Flos.h"
 
-@interface AddFloViewController ()
-
-@end
-
 @implementation AddFloViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
