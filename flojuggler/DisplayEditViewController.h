@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cycleField;
 @property (weak, nonatomic) IBOutlet UITextField *lengthField;
 @property (weak, nonatomic) IBOutlet UITextField *startDateField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 
 @property (nonatomic, strong) Flos *currentFlo;
 

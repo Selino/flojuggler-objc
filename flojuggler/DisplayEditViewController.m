@@ -34,7 +34,7 @@
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    _startDateField.text =[dateFormat stringFromDate:[self.currentFlo startDate]];
+    _startDatePicker.date = [self.currentFlo startDate];
     
 }
 
@@ -48,12 +48,11 @@
     _nameField.enabled = YES;
     _cycleField.enabled = YES;
     _lengthField.enabled = YES;
-    _startDateField.enabled = YES;
+    _startDatePicker.userInteractionEnabled = YES;
     
     _nameField.borderStyle = UITextBorderStyleRoundedRect;
     _cycleField.borderStyle = UITextBorderStyleRoundedRect;
     _lengthField.borderStyle = UITextBorderStyleRoundedRect;
-    _startDateField.borderStyle = UITextBorderStyleRoundedRect;
     
     _editButton.hidden = YES;
     _doneButton.hidden = NO;
@@ -62,12 +61,11 @@
     _nameField.enabled = NO;
     _cycleField.enabled = NO;
     _lengthField.enabled = NO;
-    _startDateField.enabled = NO;
+    _startDatePicker.userInteractionEnabled = NO;
     
     _nameField.borderStyle = UITextBorderStyleNone;
     _cycleField.borderStyle = UITextBorderStyleNone;
     _lengthField.borderStyle = UITextBorderStyleNone;
-    _startDateField.borderStyle = UITextBorderStyleNone;
     
     _editButton.hidden = NO;
     _doneButton.hidden = YES;
@@ -79,10 +77,7 @@
     
     _currentFlo.cycle = [f numberFromString: _cycleField.text];
     _currentFlo.length = [f numberFromString: _lengthField.text];
-    
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd"];
-    _currentFlo.startDate = [df dateFromString:_startDateField.text];
+    _currentFlo.startDate = [_startDatePicker date];
     
     AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication]delegate];
     [myApp saveContext];
