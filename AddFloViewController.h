@@ -12,23 +12,22 @@
 @protocol AddFloViewControllerDelegate;
 
 @interface AddFloViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) IBOutlet UITextField *cycleField;
-@property (weak, nonatomic) IBOutlet UITextField *lengthField;
-@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 
-@property (nonatomic, strong) Flos  *currentFlo;
+    @property (weak, nonatomic) IBOutlet UITextField *nameField;
+    @property (weak, nonatomic) IBOutlet UITextField *cycleField;
+    @property (weak, nonatomic) IBOutlet UITextField *lengthField;
+    @property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
+    @property (nonatomic, strong) Flos  *currentFlo;
+    @property (nonatomic, weak) id <AddFloViewControllerDelegate> delegate;
 
-@property (nonatomic, weak) id <AddFloViewControllerDelegate> delegate;
-
-- (IBAction)cancelFlo:(id)sender;
-- (IBAction)saveFlo:(id)sender;
+    - (IBAction)cancelFlo:(id)sender;
+    - (IBAction)saveFlo:(id)sender;
 
 @end
 
 @protocol AddFloViewControllerDelegate
 
--(void)addFloViewControllerDidSave;
--(void)addFloViewControllerDidCancel:(Flos *)floToDelete;
+    -(void)addFloViewControllerDidSave;
+    -(void)addFloViewControllerDidCancel:(Flos *)floToDelete;
 
 @end
