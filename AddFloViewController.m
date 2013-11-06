@@ -27,11 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// read newly created object values into fields except for date picker which defaults to today after loading the view.
     _nameField.text = [self.currentFlo name];
     _cycleField.text = [[self.currentFlo cycle] stringValue];
     _lengthField.text = [[self.currentFlo length] stringValue];
-    _startDatePicker.date = [self.currentFlo startDate];
 }
 
 - (void)didReceiveMemoryWarning

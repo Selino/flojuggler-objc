@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Flos" representedClassName="Flos" syncable="YES">
-        <attribute name="cycle" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" defaultValueString="NAME" syncable="YES"/>
+        <attribute name="cycle" attributeType="Integer 16" defaultValueString="28" syncable="YES"/>
+        <attribute name="length" attributeType="Integer 16" defaultValueString="7" syncable="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString="UNNAMED" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" defaultDateTimeInterval="378734400" defaultValueString="2013-01-01" syncable="YES"/>
     </entity>
     <elements>
