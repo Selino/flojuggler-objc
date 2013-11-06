@@ -21,11 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
+- (BOOL)disablesAutomaticKeyboardDismissal;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
+- (IBAction)KeyboardDoneKeyPressed:(id)sender;
 - (IBAction)doneEditing:(id)sender;
 - (IBAction)startEditing:(id)sender;
-
-- (BOOL)disablesAutomaticKeyboardDismissal;
-- (IBAction)KeyboardDoneKeyPressed:(id)sender;
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end
