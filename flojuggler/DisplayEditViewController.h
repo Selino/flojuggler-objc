@@ -24,4 +24,8 @@
 - (IBAction)doneEditing:(id)sender;
 - (IBAction)startEditing:(id)sender;
 
+- (BOOL)disablesAutomaticKeyboardDismissal;
+- (IBAction)KeyboardDoneKeyPressed:(id)sender;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
 @end
