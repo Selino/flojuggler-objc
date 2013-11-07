@@ -23,6 +23,10 @@
     - (IBAction)cancelFlo:(id)sender;
     - (IBAction)saveFlo:(id)sender;
 
+- (BOOL)disablesAutomaticKeyboardDismissal;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (IBAction)KeyboardDoneKeyPressed:(id)sender;
+
 @end
 
 @protocol AddFloViewControllerDelegate

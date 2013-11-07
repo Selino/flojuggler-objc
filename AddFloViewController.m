@@ -11,6 +11,29 @@
 
 @implementation AddFloViewController
 
+- (BOOL)disablesAutomaticKeyboardDismissal
+{
+    return NO;
+}
+
+- (IBAction)KeyboardDoneKeyPressed:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([_nameField isFirstResponder] && [touch view] != _nameField) {
+        [_nameField resignFirstResponder];
+    } else if ([_cycleField isFirstResponder] && [touch view] != _cycleField) {
+        [_cycleField resignFirstResponder];
+    } else if ([_lengthField isFirstResponder] && [touch view] != _lengthField) {
+        [_lengthField resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
