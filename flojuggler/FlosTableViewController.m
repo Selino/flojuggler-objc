@@ -53,14 +53,14 @@
     }
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (id)initWithStyle:(UITableViewStyle)style
+//{
+//    self = [super initWithStyle:style];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 
 - (void)viewDidLoad
@@ -110,9 +110,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-
+    cell.selectionStyle = UITableViewCellStyleSubtitle;
+    
     Flos *flo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = flo.name;
+    
+    cell.detailTextLabel.text = [flo getStatus];
+    
     return cell;
 }
 
@@ -161,7 +165,6 @@
 }
 */
 
-#pragma mark -
 #pragma mark fetched Results Contoller section
 -(NSFetchedResultsController *) fetchedResultsController {
     if (_fetchedResultsController != nil) {
@@ -212,10 +215,11 @@
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
-        case NSFetchedResultsChangeUpdate: {
+        case NSFetchedResultsChangeUpdate: { // updates the table after editing a detail
             Flos *changedFlo = [self.fetchedResultsController objectAtIndexPath:indexPath];
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
             cell.textLabel.text = changedFlo.name;
+            cell.detailTextLabel.text = [changedFlo getStatus];
         }
             break;
             

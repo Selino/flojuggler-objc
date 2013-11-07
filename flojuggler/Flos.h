@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSNumber * cycle;
 @property (nonatomic, retain) NSDate * startDate;
 
+-(NSString*)getStatus;
+
 @end

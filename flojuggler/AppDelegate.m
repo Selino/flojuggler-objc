@@ -20,7 +20,7 @@
     
     UINavigationController *nav = (UINavigationController *)self.window.rootViewController; //grab the nav controller
     
-    FlosTableViewController *fvtc = (FlosTableViewController *) [[nav viewControllers]objectAtIndex:0]; // gran the table view out of the nav
+    FlosTableViewController *fvtc = (FlosTableViewController *) [[nav viewControllers]objectAtIndex:0]; // grab the table view out of the nav
     
     fvtc.managedObjectContext = self.managedObjectContext; //set the managed context of the table view to this app delegate's context
     
