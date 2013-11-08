@@ -114,9 +114,7 @@
     
     Flos *flo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = flo.name;
-    
     cell.detailTextLabel.text = [flo getStatus];
-    
     return cell;
 }
 

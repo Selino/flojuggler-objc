@@ -27,16 +27,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testMakeDays
 {
-    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-    Flos *myObj = [[Flos alloc]init];
+    int myNumber = 1383337499;
     
-    //Flos *myObj = [[Flos alloc]initWithEntity:(myObj *) insertIntoManagedObjectContext:[]];
-    [myObj selinoMethod:20];
-    
-    [myObj setName:@"bob"];
-    XCTAssertNotNil([myObj name], @"Name failed to set");
+    int myNewNumber = makeDays
+    XCTAssert(myNumber > 2, @"Failure");
 }
 
 @end

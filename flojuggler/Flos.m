@@ -18,50 +18,46 @@
 @dynamic cycle;
 @dynamic startDate;
 
+int makeDays(value) {
+    //int a =  value / 1000;
+    int b = value / 60;
+    int c = b / 60;
+    int d = c / 24;
+
+    return d;
+}
+
 -(NSString*)getStatus {
-    //do something
-    //this is the formula
-    //status = (date - recordDay)%(cycle);
-    /*
-     
-     if (flo < length) {
-     // red: x days into
-     days = length - flo;
-     days <= 1 ? sDayDisplay = " day" : sDayDisplay = " days";
-     
-     return '<li class=\"red_pred\">' + myObj.name + " will have <span class=\"red\">"+ days + sDayDisplay + "</span> left on her flo on <span class=\"red\">" + showdate.toDateString() +"</span></li>";
-     } else {
-     // yellow : x days until
-     difference = (date - recordDay);
-     days = cycle - flo;
-     days <= 1 ? sDayDisplay = " day" : sDayDisplay = " days";
-     
-     if (days <= 3) {
-     return '<li class=\"yellow_pred\">' + myObj.name + " will be <span class=\"yellow\">"+ days + sDayDisplay +"</span> from her next flo on <span class=\"yellow\">" + showdate.toDateString() +"</span></li>";
-     } else {
-     return '<li class=\"green_pred\">' + myObj.name + " will be <span class=\"green\">"+ days + sDayDisplay +"</span> to her next flo on <span class=\"green\">" + showdate.toDateString() +"</span></li>";
-     }
-     }
-     
-     */
-    
-    //int myCycle = [self.cycle intValue];
-    //int myLength = [self.length intValue];
-    //int myCalc = myCycle + myLength;
-    
+    int myLength = [self.length intValue];
     int myCycle = [self.cycle intValue];
     
     NSDate *startDate = self.startDate;
-    NSTimeInterval epocTi = [startDate timeIntervalSince1970];
+    int epocStartDate = [startDate timeIntervalSince1970];
+    int daysEpocStartDate = makeDays(epocStartDate);
     
     NSDate *todaysDate = [NSDate date];
-    NSTimeInterval epocTo = [todaysDate timeIntervalSince1970];
+    int epocToday = [todaysDate timeIntervalSince1970];
+    int daysEpocToday = makeDays(epocToday);
     
-    int ti = fmodf((epocTo - epocTi), myCycle);
+    int daysBetween = 0;
     
+    int finalStatus = fmodf((daysEpocToday - daysEpocStartDate), myCycle);
     
-    return [NSString stringWithFormat:@"%d",ti];
-    //return [self.cycle stringValue];
+    if (finalStatus < myLength) {
+        daysBetween = myLength - finalStatus;
+        NSString *myRedStatus = [[NSString alloc]initWithFormat: @"On flo for next %d days",daysBetween];
+        return myRedStatus;
+    } else {
+        daysBetween = myCycle - myLength;
+        
+        if (daysBetween <= 3) {
+            NSString *myYellowStatus = [[NSString alloc]initWithFormat:@"%d days from next flo",daysBetween];
+            return myYellowStatus;
+        } else {
+            NSString *myGreenStatus = [[NSString alloc]initWithFormat:@"%d days to next flo",daysBetween];
+            return myGreenStatus;
+        }
+    }
 }
 
 @end
