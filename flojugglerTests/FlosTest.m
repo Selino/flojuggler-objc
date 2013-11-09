@@ -29,10 +29,8 @@
 
 - (void)testMakeDays
 {
-    int myNumber = 1383337499;
-    
-    int myNewNumber = makeDays
-    XCTAssert(myNumber > 2, @"Failure");
+    int myNewNumber = makeDays(1383337499);
+    XCTAssert(myNewNumber == 16010, @"Days are not calculating correctly.");
 }
 
 @end
