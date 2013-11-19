@@ -68,7 +68,7 @@
 }
 
 - (IBAction)startEditing:(id)sender {
-    _nameField.enabled = YES;
+    /*_nameField.enabled = YES;
     _cycleField.enabled = YES;
     _lengthField.enabled = YES;
     _startDatePicker.userInteractionEnabled = YES;
@@ -78,20 +78,20 @@
     _lengthField.borderStyle = UITextBorderStyleRoundedRect;
     
     _editButton.hidden = YES;
-    _doneButton.hidden = NO;
+    _doneButton.hidden = NO;*/
 }
 - (IBAction)doneEditing:(id)sender {
-    _nameField.enabled = NO;
-    _cycleField.enabled = NO;
-    _lengthField.enabled = NO;
-    _startDatePicker.userInteractionEnabled = NO;
-    
-    _nameField.borderStyle = UITextBorderStyleNone;
-    _cycleField.borderStyle = UITextBorderStyleNone;
-    _lengthField.borderStyle = UITextBorderStyleNone;
-    
-    _editButton.hidden = NO;
-    _doneButton.hidden = YES;
+//    _nameField.enabled = NO;
+//    _cycleField.enabled = NO;
+//    _lengthField.enabled = NO;
+//    _startDatePicker.userInteractionEnabled = NO;
+//    
+//    _nameField.borderStyle = UITextBorderStyleNone;
+//    _cycleField.borderStyle = UITextBorderStyleNone;
+//    _lengthField.borderStyle = UITextBorderStyleNone;
+//    
+//    _editButton.hidden = NO;
+//    _doneButton.hidden = YES;
     
     _currentFlo.name = _nameField.text;
     

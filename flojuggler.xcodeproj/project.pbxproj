@@ -26,8 +26,8 @@
 		7629AA501811AFC000F84AB7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */; };
 		7629AA531811B10600F84AB7 /* FlosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7629AA521811B10600F84AB7 /* FlosTableViewController.m */; };
 		7633865A1828701F002DDFB1 /* DisplayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763386591828701F002DDFB1 /* DisplayEditViewController.m */; };
+		76538363183B3B240020C1DD /* flo 22-19-26-494.png in Resources */ = {isa = PBXBuildFile; fileRef = 76538362183B3B240020C1DD /* flo 22-19-26-494.png */; };
 		767DCF6F1819F6C500517509 /* FlosTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 767DCF6E1819F6C500517509 /* FlosTest.m */; };
-		76D3E976182C3C8400011690 /* IMG_5562.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76D3E975182C3C8400011690 /* IMG_5562.jpg */; };
 		76F2B3AE1828354100B6B66A /* AddFloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F2B3AD1828354100B6B66A /* AddFloViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +67,8 @@
 		7629AA521811B10600F84AB7 /* FlosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTableViewController.m; sourceTree = "<group>"; };
 		763386581828701F002DDFB1 /* DisplayEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayEditViewController.h; sourceTree = "<group>"; };
 		763386591828701F002DDFB1 /* DisplayEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayEditViewController.m; sourceTree = "<group>"; };
+		76538362183B3B240020C1DD /* flo 22-19-26-494.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flo 22-19-26-494.png"; sourceTree = "<group>"; };
 		767DCF6E1819F6C500517509 /* FlosTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlosTest.m; sourceTree = "<group>"; };
-		76D3E975182C3C8400011690 /* IMG_5562.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5562.jpg; sourceTree = "<group>"; };
 		76F2B3AC1828354100B6B66A /* AddFloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFloViewController.h; path = ../AddFloViewController.h; sourceTree = "<group>"; };
 		76F2B3AD1828354100B6B66A /* AddFloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFloViewController.m; path = ../AddFloViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +154,7 @@
 		7629AA201811AE1A00F84AB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				76D3E975182C3C8400011690 /* IMG_5562.jpg */,
+				76538362183B3B240020C1DD /* flo 22-19-26-494.png */,
 				7629AA211811AE1A00F84AB7 /* flojuggler-Info.plist */,
 				7629AA221811AE1A00F84AB7 /* InfoPlist.strings */,
 				7629AA251811AE1A00F84AB7 /* main.m */,
@@ -234,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "flojuggler" */;
+			buildConfigurationList = 7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "Flojuggler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,8 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7629AA501811AFC000F84AB7 /* MainStoryboard.storyboard in Resources */,
-				76D3E976182C3C8400011690 /* IMG_5562.jpg in Resources */,
 				7629AA241811AE1A00F84AB7 /* InfoPlist.strings in Resources */,
+				76538363183B3B240020C1DD /* flo 22-19-26-494.png in Resources */,
 				7629AA2F1811AE1A00F84AB7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "flojuggler" */ = {
+		7629AA0F1811AE1A00F84AB7 /* Build configuration list for PBXProject "Flojuggler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7629AA441811AE1A00F84AB7 /* Debug */,
