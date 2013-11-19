@@ -58,6 +58,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)photoBtn {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
 - (IBAction)cancelFlo:(id)sender {
     // dismiss and remove the object
     [self.delegate addFloViewControllerDidCancel:[self currentFlo]];
