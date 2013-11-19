@@ -141,12 +141,12 @@
 				7629AA2B1811AE1A00F84AB7 /* flojuggler.xcdatamodeld */,
 				7629AA4C1811AF7E00F84AB7 /* Flos.h */,
 				7629AA4D1811AF7E00F84AB7 /* Flos.m */,
-				7629AA201811AE1A00F84AB7 /* Supporting Files */,
 				7629AA4F1811AFC000F84AB7 /* MainStoryboard.storyboard */,
 				763386581828701F002DDFB1 /* DisplayEditViewController.h */,
 				763386591828701F002DDFB1 /* DisplayEditViewController.m */,
 				7629AA511811B10600F84AB7 /* FlosTableViewController.h */,
 				7629AA521811B10600F84AB7 /* FlosTableViewController.m */,
+				7629AA201811AE1A00F84AB7 /* Supporting Files */,
 			);
 			path = flojuggler;
 			sourceTree = "<group>";
