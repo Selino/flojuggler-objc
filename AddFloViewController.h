@@ -22,7 +22,7 @@
 
     - (IBAction)cancelFlo:(id)sender;
     - (IBAction)saveFlo:(id)sender;
-    - (IBAction)photoBtn;
+    - (IBAction)addPhotoBtn;
 
 - (BOOL)disablesAutomaticKeyboardDismissal;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;

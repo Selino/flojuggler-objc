@@ -58,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)photoBtn {
+-(IBAction)addPhotoBtn {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:picker animated:YES completion:NULL];
